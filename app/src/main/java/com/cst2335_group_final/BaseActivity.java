@@ -5,26 +5,25 @@ import android.view.Menu;
 import android.view.MenuInflater;
 
 /**
- * Created by victo on 2016-12-07.
+ * The BaseActivity class is the root of the Activity classes.
+ * It extends AppCompatActivity.
+ * It enables the use of a shared menu.
+ *
+ * Created by Victoria Sawyer on 2016-12-07.
  */
-
 public class BaseActivity extends AppCompatActivity {
 
+    /**
+     * Create the Menu to be included in the activity.
+     * It uses the Menu Resource file menu_house_settings.xml
+     *
+     * @param   menu    Menu
+     * @return  true
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_house_settings, menu);
         return true;
     }
-
-    /*@Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_help:
-                // do what you want here
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }*/
 }

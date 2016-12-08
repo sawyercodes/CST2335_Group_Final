@@ -18,7 +18,7 @@
     <string name="house_temp_schedule_heading">Schedule</string>
     <string name="house_temp_heading">Temperature</string>
     <string name="title_house_temp_fragment">House Temperature</string>
-    <string name="house_temp_degrees">&#176; Celcius</string>
+    <string name="house_temp_degrees">&#176; Celsius</string>
     <string name="title_weather_fragment">Weather</string>
     <string name="edit_temp_schedule">Edit</string>
     <string name="weather_current_temp">Current: </string>
@@ -42,10 +42,10 @@
     </string>
     <string name="help_dialog_message_garage">
         &lt;p&gt;
-            Press "Open Garage" to open the garage and turn on the light for 5 seconds. A toast will appear.
+            Press \'Open Garage\' to open the garage and turn on the light for 5 seconds. A toast will appear.
         &lt;/p&gt;
         &lt;p&gt;
-            Press "Turn On" to turn the light on. A snackbar will appear. If possible the device\'s light will turn on.
+            Press \'Turn On\' to turn the light on. A snackbar will appear. If possible the device\'s light will turn on.
         &lt;/p&gt;
     </string>
     <string name="help_dialog_message_house_temp">
@@ -53,10 +53,10 @@
             Use the number picker to change the house temperature.
         &lt;/p&gt;
         &lt;p&gt;
-            Press "Edit" to add items to the temperature schedule.
+            Press \'Edit\' to add items to the temperature schedule.
         &lt;/p&gt;
         &lt;p&gt;
-            Press "Delete" to remove items from the temperature schedule by name.
+            Press \'Delete\' to remove items from the temperature schedule by name.
         &lt;/p&gt;
     </string>
     <string name="help_dialog_message_weather">

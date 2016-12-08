@@ -6,23 +6,29 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 /**
- * Created by victo on 2016-10-12.
+ * The TempScheduleDB extends SQLiteOpenHelper
+ * to create a the tempSchedule database
+ * which holds the values of temperature schedule
+ * from HouseTempFragments ListView.
+ *
+ * Created by Victoria Sawyer on 2016-12-07.
  */
-
 public class TempScheduleDB extends SQLiteOpenHelper {
 
-    protected static final String ACTIVITY_NAME = "TempScheduleDB";
-    private static final String DATABASE_NAME = "tempSchedule.db";
-    private static final int VERSION_NUM = 1;
-
-    protected static final String TABLE_NAME = "TEMP_SCHEDULE_TABLE";
-    protected static final String KEY_ID = "id";
-    protected static final String KEY_SCHEDULE = "schedule";
-
+    /**
+     * Create the helper object to manage the database by calling to the
+     * super constructor, SQLiteOenHelper.
+     * @param   ctx   Context
+     */
     public TempScheduleDB(Context ctx) {
         super(ctx, DATABASE_NAME, null, VERSION_NUM);
     }
 
+    /**
+     * Create the table in the database.
+     *
+     * @param   db  The database to be used.
+     */
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(" CREATE TABLE " + TABLE_NAME + " (" +
@@ -32,10 +38,47 @@ public class TempScheduleDB extends SQLiteOpenHelper {
         Log.i(ACTIVITY_NAME, "Calling onCreate()");
     }
 
+    /**
+     * Uprgrade the database version number.
+     *
+     * @param db            SQLiteDatabase
+     * @param oldVersion    int
+     * @param newVersion    int
+     */
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME + ";");
         onCreate(db);
         Log.i(ACTIVITY_NAME, "Calling onUpdate(), oldVersion=" + oldVersion + ", newVersion=" + newVersion);
     }
+
+    /**
+     * The name of the current activity.
+     */
+    protected static final String ACTIVITY_NAME = "TempScheduleDB";
+
+    /**
+     * The name of the database.
+     */
+    private static final String DATABASE_NAME = "tempSchedule.db";
+
+    /**
+     * The version number of the database.
+     */
+    private static final int VERSION_NUM = 1;
+
+    /**
+     * The name of the table that stores the temperature schedule values.
+     */
+    protected static final String TABLE_NAME = "TEMP_SCHEDULE_TABLE";
+
+    /**
+     * The name of the column that holds the ID of the temperature schedule values.
+     */
+    protected static final String KEY_ID = "id";
+
+    /**
+     * The name of the column that holds the string of the temperature schedule values.
+     */
+    protected static final String KEY_SCHEDULE = "schedule";
 }

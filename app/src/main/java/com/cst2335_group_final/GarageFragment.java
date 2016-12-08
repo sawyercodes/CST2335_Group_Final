@@ -1,6 +1,5 @@
 package com.cst2335_group_final;
 
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.os.Bundle;
@@ -13,19 +12,35 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-import static android.content.Context.MODE_PRIVATE;
-
+/**
+ * The GarageFragment extends Fragment.
+ * In this Fragment the user can open the garage door
+ * and turn on the light.
+ * This is displayed in HouseSettingsFragments when
+ * the garage item in HouseSetting's ListView is selected.
+ *
+ * Created by Victoria Sawyer on 2016-12-07.
+ */
 public class GarageFragment extends Fragment {
 
+    /**
+     * The GarageFragment's onCreateView inflates the layout
+     * to appear within HouseSettingsFragment activity.
+     * This is where the ToggleButtons for garage door and
+     * garage light are handled.
+     *
+     * @param   inflater    LayoutInflater
+     * @param   container   ViewGroup
+     * @param   savedInstanceState  Bundle
+     * @return  View
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.garage_fragment, container, false);
+        View view = inflater.inflate(R.layout.garage_fragment, container, false);
         this.container = container;
 
-        toggleGarageDoor = (ToggleButton) view.findViewById(R.id.toggle_garage_door);
-        toggleGarageLight = (ToggleButton) view.findViewById(R.id.toggle_garage_light);
-
-        //snackbar = Snackbar.make(view, "", Snackbar.LENGTH_SHORT);
+        final ToggleButton toggleGarageDoor = (ToggleButton) view.findViewById(R.id.toggle_garage_door);
+        final ToggleButton toggleGarageLight = (ToggleButton) view.findViewById(R.id.toggle_garage_light);
 
         try {
             cam = Camera.open();
@@ -33,15 +48,14 @@ public class GarageFragment extends Fragment {
             e.printStackTrace();
         }
 
+
         toggleGarageDoor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (toggleGarageDoor.isChecked()) {
                     Toast.makeText(view.getContext(), "Opening Garage", Toast.LENGTH_LONG).show();
-                    garageDoorSetting = "open";
                 } else {
                     Toast.makeText(view.getContext(), "Closing Garage", Toast.LENGTH_LONG).show();
-                    garageDoorSetting = "closed";
                 }
                 toggleGarageLight.toggle();
                 toggleFlashOn();
@@ -62,10 +76,8 @@ public class GarageFragment extends Fragment {
             public void onClick(View view) {
                 if (toggleGarageLight.isChecked()) {
                     toggleFlashOn();
-                    garageLightSetting = "on";
                 } else {
                     toggleFlashOff();
-                    garageLightSetting = "off";
                 }
             }
         });
@@ -73,6 +85,11 @@ public class GarageFragment extends Fragment {
         return view;
     }
 
+    /**
+     * The method implemented when the garage light is toggled on.
+     * If possible, it toggles the phone's flashlight on.
+     * It also produces a Snackbar.
+     */
     private void toggleFlashOn() {
         try {
             if (getContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)) {
@@ -87,6 +104,11 @@ public class GarageFragment extends Fragment {
         Snackbar.make(container.getRootView(), "Light On", Snackbar.LENGTH_SHORT).show();
     }
 
+    /**
+     * The method implemented when the garage light is toggled off.
+     * If possible, it toggles the phone's flashlight off.
+     * It also produces a Snackbar.
+     */
     private void toggleFlashOff() {
         try {
             if (getContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)) {
@@ -101,41 +123,14 @@ public class GarageFragment extends Fragment {
         Snackbar.make(container.getRootView(), "Light Off", Snackbar.LENGTH_SHORT).show();
     }
 
-    private void loadSavedSettings() {
-        SharedPreferences preferences = getActivity().getSharedPreferences(SETTINGS, MODE_PRIVATE);
-        SharedPreferences.Editor editor = preferences.edit();
-        garageDoorSetting = preferences.getString(STORED_GARAGE_DOOR, garageDoorSetting);
-        garageLightSetting = preferences.getString(STORED_GARAGE_LIGHT, garageLightSetting);
-
-        if (garageDoorSetting.equals("open") && (toggleGarageDoor.isChecked())) {
-            toggleGarageDoor.toggle();
-        }
-
-        if (garageLightSetting.equals("on") && !(toggleGarageLight.isChecked())) {
-            toggleGarageLight.toggle();
-            toggleFlashOn();
-        }
-    }
-
-    private void saveSettings() {
-        SharedPreferences preferences = getActivity().getSharedPreferences(SETTINGS, MODE_PRIVATE);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putString(STORED_GARAGE_DOOR, garageDoorSetting);
-        editor.putString(STORED_GARAGE_LIGHT, garageLightSetting);
-        editor.commit();
-    }
-
-    private View view;
+    /**
+     * This variable holds the ViewGroup of the fragment, the parent activity which it appears in.
+     */
     private ViewGroup container;
-    private ToggleButton toggleGarageDoor;
-    private ToggleButton toggleGarageLight;
+
+    /**
+     * The camera of the phone.
+     */
     private Camera cam;
-
-    public static final String SETTINGS = "com.example.victo.cst2335-finalproject.settings";
-    public static final String STORED_GARAGE_DOOR = "storedGarageDoor";
-    public static final String STORED_GARAGE_LIGHT = "storedGarageLight";
-
-    private String garageDoorSetting = null;
-    private String garageLightSetting = null;
 
 }
