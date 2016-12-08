@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:text="5"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tripText"
+        android:layout_weight="0.19"
+        android:textSize="32sp"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="154dp"
+        android:background="@android:color/background_dark"
+        android:textAlignment="textEnd" />
+
+    <TextView
+        android:text="Trip Distance (Km)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tripText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="64dp"
+        android:id="@+id/textView2"
+        android:textColor="@color/colorAccentAuto"
+        android:fontFamily="monospace" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/ic_menu_revert"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="41dp"
+        android:id="@+id/fab_reset_trip" />
+
+    <TextView
+        android:text="Kilometers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/kilometers"
+        android:textColor="@color/colorAccentAuto"
+        android:fontFamily="monospace"
+        android:layout_above="@+id/totalMilageText"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="20"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/totalMilageText"
+        android:layout_weight="0.19"
+        android:textSize="64sp"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="106dp"
+        android:background="@android:color/background_dark"
+        android:textAlignment="textEnd"
+        android:layout_above="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

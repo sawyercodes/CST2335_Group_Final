@@ -1,11 +1,91 @@
 <resources>
+    <!-- HOUSE SETTINGS -->
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+    </style>
+
+    <style name="HouseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+    </style>
+
+    <!--<style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>-->
+
+    <style name="HouseDialog" parent="HouseTheme">
+        <item name="android:textColorPrimary">@color/background</item>
+    </style>
+
+    <style name="HeadingText" parent="HouseTheme">
+        <item name="android:textSize">32dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="SubheadingText" parent="HouseTheme">
+        <item name="android:textSize">24dp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="Button" parent="HouseTheme">
+        <item name="android:textSize">28dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/textColorPrimary</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/toggle_text</item>
+    </style>
+
+    <!--<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />-->
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/colorPrimary</item>
+    </style>
+
+<!--Automobile Styles-->
+
+    <style name="AutoTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryAuto</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkAuto</item>
+        <item name="colorAccent">@color/colorAccentAuto</item>
+        <item name="android:windowBackground">@color/windowBackgroundAuto</item>
+        <item name="android:navigationBarColor">@color/navigationBarColorAuto</item>
+        <item name="android:textColorPrimary">@color/textColorPrimaryAuto</item>
+
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.NoActionBar" parent="AutoTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="CustomProgressBarHorizontal" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:minHeight">50dip</item>
+        <item name="android:maxHeight">50dip</item>
+    </style>
+
+    <style name="CustomerSeekBar" parent="Widget.AppCompat.SeekBar.Discrete">
+        <item name="android:minHeight">25dip</item>
+        <item name="android:maxHeight">50dip</item>
     </style>
 
 </resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/car_background"
+    tools:context="com.cst2335_group_final.MenuOptionDetailFragment">
+
+
+    <ImageButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:srcCompat="@drawable/fog_light"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:id="@+id/btn_fog"
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_marginEnd="17dp"
+        android:layout_alignTop="@+id/btn_high_beam"
+        android:layout_toStartOf="@+id/btn_high_beam" />
+
+    <ImageButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:srcCompat="@drawable/high_beam"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:id="@+id/btn_high_beam"
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp" />
+
+    <ImageButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:srcCompat="@drawable/low_beam"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:id="@+id/btn_low_beam"
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_alignTop="@+id/btn_high_beam"
+        android:layout_toEndOf="@+id/btn_high_beam"
+        android:layout_marginStart="22dp" />
+
+    <ImageButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:srcCompat="@drawable/dome_light"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:id="@+id/btn_lamp"
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_marginTop="187dp"
+        android:layout_below="@+id/btn_high_beam"
+        android:layout_centerHorizontal="true" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:srcCompat="@drawable/fuel_pump"
+        android:layout_marginTop="22dp"
+        android:id="@+id/fab_fuel_light"
+        android:layout_below="@+id/btn_lamp"
+        android:layout_toStartOf="@+id/btn_fog"
+        app:elevation="5dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:srcCompat="@drawable/trunk"
+        android:layout_marginBottom="18dp"
+        android:id="@+id/fab_boot_light"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
