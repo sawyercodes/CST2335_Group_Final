@@ -1,3 +1,71 @@
 <resources>
-    <string name="app_name">CST2335_Group_Final</string>
+    <!-- HOUSE SETTINGS -->
+    <string name="app_name">House Settings</string>
+    <string name="action_help">Help</string>
+    <string name="title_activity_house_settings_content">HouseSettingsContent</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_house_settings_container">HouseSettingsContainer</string>
+    <string name="garage_door_heading">Garage Door</string>
+    <string name="garage_heading">Garage</string>
+    <string name="garage_door_closed">Open Garage</string>
+    <string name="garage_door_open">Close Garage</string>
+    <string name="garage_light_heading">Garage Light</string>
+    <string name="garage_light_off">Turn On</string>
+    <string name="garage_light_on">Turn Off</string>
+    <string name="house_settings_activity_name">House Settings</string>
+    <string name="title_garage_fragment">Garage</string>
+    <string name="house_temp_schedule_heading">Schedule</string>
+    <string name="house_temp_heading">Temperature</string>
+    <string name="title_house_temp_fragment">House Temperature</string>
+    <string name="house_temp_degrees">&#176; Celcius</string>
+    <string name="title_weather_fragment">Weather</string>
+    <string name="edit_temp_schedule">Edit</string>
+    <string name="weather_current_temp">Current: </string>
+    <string name="weather_min_temp">Min: </string>
+    <string name="weather_max_temp">Max: </string>
+    <string name="dialog_message">Add to Schedule</string>
+    <string name="dialog_title">Edt Schedule</string>
+    <string name="dialog_name_text">Name:</string>
+    <string name="dialog_temp_text">Temperature:</string>
+    <string name="dialog_time_text">Time:</string>
+    <string name="help_dialog_title_house_settings">House Settings</string>
+    <string name="help_dialog_message_house_settings">
+        &lt;p&gt;
+            Author: Victoria Sawyer
+            &lt;br&gt;
+            Version: %1$s
+        &lt;/p&gt;
+        &lt;p&gt;
+            Select Garage, House Temperature or Weather. Detailed instructions for each in their respective menus.
+        &lt;/p&gt;
+    </string>
+    <string name="help_dialog_message_garage">
+        &lt;p&gt;
+            Press "Open Garage" to open the garage and turn on the light for 5 seconds. A toast will appear.
+        &lt;/p&gt;
+        &lt;p&gt;
+            Press "Turn On" to turn the light on. A snackbar will appear. If possible the device\'s light will turn on.
+        &lt;/p&gt;
+    </string>
+    <string name="help_dialog_message_house_temp">
+        &lt;p&gt;
+            Use the number picker to change the house temperature.
+        &lt;/p&gt;
+        &lt;p&gt;
+            Press "Edit" to add items to the temperature schedule.
+        &lt;/p&gt;
+        &lt;p&gt;
+            Press "Delete" to remove items from the temperature schedule by name.
+        &lt;/p&gt;
+    </string>
+    <string name="help_dialog_message_weather">
+        &lt;p&gt;
+            This fragment displays the weather for Ottawa.
+        &lt;/p&gt;
+    </string>
+    <string name="version_number">1.0</string>
+    <string name="delete_temp_schedule">Delete</string>
+    <string name="edit_schedule_title">Edit Schedule</string>
+    <string name="delete_schedule_title">Delete Schedule Item</string>
 </resources>
