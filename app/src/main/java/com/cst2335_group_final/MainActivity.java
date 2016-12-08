@@ -38,7 +38,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnLaunchHouse = (Button)findViewById(R.id.btnLaunchHouse);
+        btnLaunchHouse.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), HouseSettings.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     Button btnLaunchAutomobile;
+    Button btnLaunchHouse;
 }

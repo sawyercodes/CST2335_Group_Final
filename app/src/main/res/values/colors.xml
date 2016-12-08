@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<<<<<<< HEAD
     <!-- HOUSE SETTINGS -->
-    <color name="colorPrimary">#4b327b</color>
-    <color name="colorPrimaryDark">#2d1e4b</color>
+    <!--<color name="colorPrimary">#4b327b</color>
+    <color name="colorPrimaryDark">#2d1e4b</color>-->
     <color name="colorPrimaryLight">#4b327b</color>
-    <color name="colorAccent">#5959c2</color>
+    <!--<color name="colorAccent">#5959c2</color>-->
     <color name="background">#333333</color>
     <color name="textColorPrimary">#cccccc</color>
     <color name="textColorPrimaryDark">#888888</color>

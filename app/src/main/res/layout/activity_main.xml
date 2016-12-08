@@ -16,6 +16,18 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="102dp"
-        android:id="@+id/btnLaunchAutomobile" />
+        android:layout_marginTop="50dp"
+        android:id="@+id/btnLaunchAutomobile"
+        android:theme="@style/Button"/>
+
+    <Button
+        android:text="House Activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnLaunchAutomobile"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="50dp"
+        android:id="@+id/btnLaunchHouse"
+        android:theme="@style/Button"/>
+
 </RelativeLayout>
