@@ -1,3 +1,18 @@
+/* **************************************************************
+ * Algonquin College - School of Advanced Technology
+ * CST 2335 - Graphical Interface Programming
+ * Final Group Project
+ *
+ * Author: EVERETT HOLDEN
+ * Student #: 040812130
+ * Network login name: hold0052
+ * Lab instructor: ABDUL
+ * Section: 014
+ * Due date: 2016.12.09
+ *
+ *  -- Class definition
+ * Purpose --
+ * **************************************************************/
 package com.cst2335_group_final;
 
 import android.content.Context;
@@ -18,47 +33,62 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
-
 /**
- * Created by eberhard on 27-Nov-16.
+ * The fragment for the Automobile activity that inflates
+ * the layout for each selection option in the menu.
+ * Implements View.OnClickLister and handles the events for
+ * buttons found in the option views
+ * @author EVERETT HOLDEN
+ * @version 1.0.0 2016.11.21
  */
-
 public class MenuOptionDetailFragment extends Fragment implements View.OnClickListener {
 
+    /**
+     * Default constructor as required by the Fragment API
+     *************************************************************/
     public MenuOptionDetailFragment() {
-
     }
 
+    /**
+     * Created the fragment. Checks if the arguments passed into the
+     * fragment contain the ITEM_ID file that stores the option
+     * that was selected in the ListView
+     * @param savedInstanceState the bundle data saved from prior state
+     *************************************************************/
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(ACTIVITY_NAME, "In onCreate()");
-
+        //check if ITEM_ID file is in fragment arguments
         if (getArguments().containsKey(ITEM_ID)) {
+            //stores the data passed into the fragment identifying the option selected
             item = getArguments().getString(ITEM_ID);
         }
     }
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        if (savedInstanceState != null) {
-        }
-    }
-
 
     @Override
     public void onPause() {
         super.onPause();
     }
 
+    /**
+     * Inflates the correct view for the Fragment depending on the
+     * option selected and the string value pass in from ITEM_ID and
+     * stored in the item instance variable
+     *
+     * @param inflater instance of LayoutInflater that inflates the required view
+     * @param inflater container the ViewGroup that contains the current view
+     * @param savedInstanceState the bundle data saved from prior state
+     *************************************************************/
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         Log.i(ACTIVITY_NAME, "In onCreateView()");
         View view;
+        //check if item is not null
         if (item != null) {
+            /* switch statment maps the requirement for each option selected. Depending on the selection
+               a specific layout is inflated into the view and the widgets in that view are instantiated */
             switch (item) {
                 case "Temperature Settings":
                     view = inflater.inflate(R.layout.option_climate_control, container, false);
@@ -66,13 +96,13 @@ public class MenuOptionDetailFragment extends Fragment implements View.OnClickLi
                     return view;
                 case "Fuel Level":
                     view = inflater.inflate(R.layout.option_fuel, container, false);
+                    //open fuel settings
                     settings = getActivity().getSharedPreferences(MenuOptionDetailActivity.SETTINGS_FUEL, Context.MODE_PRIVATE);
-                    btnRefuel = (Button) view.findViewById(R.id.btn_refuel);
-                    btnRefuel.setOnClickListener(this);
-                    fuelBar = (ProgressBar) view.findViewById(R.id.barFuelLevel);
-                    fuelBar.setProgress(2 * settings.getInt("fuel_level", 0));
-                    textFuel = (TextView) view.findViewById(R.id.textFuelLevel);
-                    textRange = (TextView) view.findViewById(R.id.textRange);
+                    btnRefuel = (Button) view.findViewById(R.id.btn_refuel);//instantiate refuel button
+                    btnRefuel.setOnClickListener(this);//add event handler
+                    fuelBar = (ProgressBar) view.findViewById(R.id.barFuelLevel);//instantiate fuel gauge
+                    fuelBar.setProgress(2 * settings.getInt("fuel_level", 0));//set fuel level from data in settings
+                    textRange = (TextView) view.findViewById(R.id.textRange);//instantiate
                     textFuel.setText(String.valueOf(settings.getInt("fuel_level", 0)));
                     textRange.setText(String.valueOf(calculateRange(settings.getInt("fuel_level", 0))));
                     return view;
