@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/start_lg"
+        android:background="@color/windowBackgroundAuto"
+        android:id="@+id/btn_start"
+        android:contentDescription="start button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="114dp" />
+
+    <TextView
+        android:text="Engine Start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="31dp"
+        android:id="@+id/textStart"
+        android:layout_above="@+id/btn_start"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorAccentAuto"
+        android:textSize="32sp"
+        android:fontFamily="monospace" />
+
+    <TextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="90dp"
+        android:id="@+id/textRunning"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="16sp"
+        android:fontFamily="monospace"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        app:srcCompat="@drawable/oil_dark"
+        android:id="@+id/imageOil"
+        android:layout_marginTop="45dp"
+        android:layout_above="@+id/textStart"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:srcCompat="@drawable/warning"
+        android:id="@+id/imageWarning"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="45dp"
+        android:layout_above="@+id/textStart"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:srcCompat="@drawable/engine_dark"
+        android:id="@+id/imageEngine"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="45dp"
+        android:layout_above="@+id/textStart"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>

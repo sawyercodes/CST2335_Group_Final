@@ -68,4 +68,22 @@
     <string name="delete_temp_schedule">Delete</string>
     <string name="edit_schedule_title">Edit Schedule</string>
     <string name="delete_schedule_title">Delete Schedule Item</string>
+    <string name="app_name">CST2335_Group_Final</string>
+    
+<!--Automobile Activity-->
+    <string name="engine_start">Engine Start</string>
+    <string name="engine_stop">Engine Stop</string>
+    <string name="engine_running">Engine Running</string>
+    <string name="oil">Change Oil!</string>
+    <string name="toolbar_dialog_ok">Drive</string>
+    <string name="toolbar_dialog_cancel">Cancel</string>
+    <string name="toolbar_dialog_message">Enter your estimated milage</string>
+    <string name="alert_message">There is not enough fuel to travel the estimated distance</string>
+    <string name="alert_title">Not enough gas!</string>
+    <string name="ok">Ok</string>
+
+    <!--Kitchen Activity-->
+
+    <!--LivingRoom Activity-->
+
 </resources>

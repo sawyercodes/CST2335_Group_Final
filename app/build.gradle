@@ -5,7 +5,8 @@ android {
     buildToolsVersion "24.0.3"
     defaultConfig {
         applicationId "com.cst2335_group_final"
-        minSdkVersion 22
+
+        minSdkVersion 21
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -27,8 +28,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.0.1'
     compile 'com.android.support:support-v4:23.1.1'
     compile 'com.android.support:design:23.1.1'
-    //compile 'com.android.support:design:22.2.0'
-    //compile 'com.android.support:design:22.2.1'
-    //compile 'com.android.support.design:23.0.0'
+
     testCompile 'junit:junit:4.12'
 }

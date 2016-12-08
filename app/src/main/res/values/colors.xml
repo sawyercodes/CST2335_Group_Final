@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
     <!-- HOUSE SETTINGS -->
     <color name="colorPrimary">#4b327b</color>
     <color name="colorPrimaryDark">#2d1e4b</color>
@@ -8,4 +9,17 @@
     <color name="background">#333333</color>
     <color name="textColorPrimary">#cccccc</color>
     <color name="textColorPrimaryDark">#888888</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="blue">#0066cc</color>
+
+    <color name="colorPrimaryAuto">#483050</color>
+    <color name="colorPrimaryDarkAuto">#342239</color>
+    <color name="colorAccentAuto">#e67e22</color>
+    <color name="windowBackgroundAuto">#0c0b1e</color>
+    <color name="navigationBarColorAuto">#000000</color>
+    <color name="textColorPrimaryAuto">#ffffff</color>
+    <color name="randomAuto">#1e1c47</color>
 </resources>

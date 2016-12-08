@@ -48,4 +48,40 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
 
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/colorPrimary</item>
+    </style>
+
+<!--Automobile Styles-->
+
+    <style name="AutoTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryAuto</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkAuto</item>
+        <item name="colorAccent">@color/colorAccentAuto</item>
+        <item name="android:windowBackground">@color/windowBackgroundAuto</item>
+        <item name="android:navigationBarColor">@color/navigationBarColorAuto</item>
+        <item name="android:textColorPrimary">@color/textColorPrimaryAuto</item>
+
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.NoActionBar" parent="AutoTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="CustomProgressBarHorizontal" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:minHeight">50dip</item>
+        <item name="android:maxHeight">50dip</item>
+    </style>
+
+    <style name="CustomerSeekBar" parent="Widget.AppCompat.SeekBar.Discrete">
+        <item name="android:minHeight">25dip</item>
+        <item name="android:maxHeight">50dip</item>
+    </style>
+
 </resources>

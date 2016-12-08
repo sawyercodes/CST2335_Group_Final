@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        style="@style/CustomProgressBarHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/barFuelLevel"
+        android:layout_marginTop="156dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="E"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textEmpty"
+        android:textSize="48sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_alignTop="@+id/barFuelLevel"
+        android:layout_toStartOf="@+id/barFuelLevel"
+        android:layout_marginEnd="15dp"
+        android:layout_alignBottom="@+id/barFuelLevel" />
+
+    <TextView
+        android:text="F"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textFull"
+        android:textSize="48sp"
+        android:textColor="@color/colorAccentAuto"
+        android:layout_marginStart="15dp"
+        android:layout_alignTop="@+id/barFuelLevel"
+        android:layout_toEndOf="@+id/barFuelLevel"
+        android:layout_alignBottom="@+id/barFuelLevel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/textView5"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_alignEnd="@+id/textView5"
+        android:text="          1/4        1/2        3/4         " />
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:srcCompat="@drawable/fuel_pump_white"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/imageView"
+        android:layout_above="@+id/textEmpty"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text=" |            |            |            |           |"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/barFuelLevel"
+        android:layout_alignEnd="@+id/barFuelLevel"
+        android:layout_toEndOf="@+id/textEmpty" />
+
+    <TextView
+        android:text="Tank Capacity 50 Litres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:text="Estimated range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView8"
+        android:textColor="@color/colorAccentAuto"
+        android:layout_below="@+id/textFuelRemaining"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="86dp"
+        android:textSize="20sp"
+        android:fontFamily="monospace" />
+
+    <TextView
+        android:text="Estimated fuel remaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textFuelRemaining"
+        android:layout_marginTop="45dp"
+        android:fontFamily="monospace"
+        android:textColor="@color/colorAccentAuto"
+        android:layout_below="@+id/textView6"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp" />
+
+    <TextView
+        android:text=" 0"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textRange"
+        android:layout_weight="0.19"
+        android:textSize="32sp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/background_dark"
+        android:textAlignment="textEnd"
+        android:layout_below="@+id/textView8"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_alignBottom="@+id/textKm"
+        android:layout_toStartOf="@+id/textKm" />
+
+    <TextView
+        android:text="Km"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textKm"
+        android:layout_weight="0.19"
+        android:textSize="32sp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/background_dark"
+        android:textAlignment="textEnd"
+        android:layout_below="@+id/textView8"
+        android:layout_alignEnd="@+id/textView8" />
+
+    <Button
+        android:text="Refuel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btn_refuel"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+
+    <TextView
+        android:text=" 0"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textFuelLevel"
+        android:layout_weight="0.19"
+        android:textSize="32sp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/background_dark"
+        android:textAlignment="textEnd"
+        android:layout_below="@+id/textFuelRemaining"
+        android:layout_alignEnd="@+id/imageView" />
+
+    <TextView
+        android:text="L"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textL"
+        android:layout_weight="0.19"
+        android:textSize="32sp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/background_dark"
+        android:textAlignment="textEnd"
+        android:layout_below="@+id/textFuelRemaining"
+        android:layout_toEndOf="@+id/textFuelLevel" />
+
+</RelativeLayout>

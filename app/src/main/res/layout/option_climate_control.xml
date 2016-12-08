@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:srcCompat="@drawable/ac_heat_mid"
+        android:id="@+id/btn_heat_mid"
+        android:scaleType="fitCenter"
+        android:backgroundTint="@android:color/background_dark"
+        android:layout_alignTop="@+id/btn_heat_head"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="45dp" />
+
+    <ImageButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:srcCompat="@drawable/ac_heat_foot"
+        android:id="@+id/btn_heat_foot"
+        android:scaleType="fitCenter"
+        android:backgroundTint="@android:color/background_dark"
+        android:layout_marginBottom="99dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:srcCompat="@drawable/ac_heat_head"
+        android:id="@+id/btn_heat_head"
+        android:scaleType="fitCenter"
+        android:backgroundTint="@android:color/background_dark"
+        android:layout_alignTop="@+id/btn_heat_foot"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="45dp" />
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:srcCompat="@drawable/fan_white"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/imageView3" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButton"
+        tools:backgroundTint="@android:color/background_dark"
+        android:layout_above="@+id/btn_heat_mid"
+        android:layout_alignStart="@+id/btn_heat_mid"
+        android:layout_marginBottom="50dp" />
+
+    <SeekBar
+        style="@style/CustomerSeekBar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:max="10"
+        android:progress="3"
+        android:id="@+id/seekBar"
+        android:layout_marginTop="27dp"
+        android:backgroundTint="@color/randomAuto"
+        android:background="@color/randomAuto"
+        android:layout_below="@+id/imageView3"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

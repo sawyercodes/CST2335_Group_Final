@@ -16,18 +16,29 @@
 package com.cst2335_group_final;
 
 import android.content.Intent;
-import android.os.SystemClock;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 
-public class SplashActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        SystemClock.sleep(2000);//the time the splash screen is displayed
-        finish();
+        setContentView(R.layout.activity_main);
+
+        btnLaunchAutomobile = (Button)findViewById(R.id.btnLaunchAutomobile);
+        btnLaunchAutomobile.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), AutoMenuListActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
+
+    Button btnLaunchAutomobile;
 }
