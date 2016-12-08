@@ -3,4 +3,14 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="blue">#0066cc</color>
+
+<!--Automobile-->
+    <color name="colorPrimaryAuto">#483050</color>
+    <color name="colorPrimaryDarkAuto">#342239</color>
+    <color name="colorAccentAuto">#e67e22</color>
+    <color name="windowBackgroundAuto">#0c0b1e</color>
+    <color name="navigationBarColorAuto">#000000</color>
+    <color name="textColorPrimaryAuto">#ffffff</color>
+    <color name="randomAuto">#1e1c47</color>
 </resources>
